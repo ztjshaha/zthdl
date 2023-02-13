@@ -32,7 +32,7 @@
 #*****************************************************************************************
 
 # Set the reference directory for source file relative paths (by default the value is script directory path)
-set origin_dir "./project/test"
+set origin_dir "."
 
 # Use origin directory path location variable, if specified in the tcl shell
 if { [info exists ::origin_dir_loc] } {
@@ -110,7 +110,7 @@ if { $validate_required } {
 }
 
 # Create project
-create_project ${_xil_proj_name_} origin_dir/${_xil_proj_name_} -part xc7z045ffg900-2
+create_project ${_xil_proj_name_} ./${_xil_proj_name_} -part xc7z045ffg900-2
 
 # Set the directory path for the new project
 set proj_dir [get_property directory [current_project]]
